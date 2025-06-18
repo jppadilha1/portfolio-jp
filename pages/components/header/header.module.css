@@ -1,0 +1,45 @@
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 85px;
+  border-bottom: 1px solid #0b0b0b0f;
+  background-color: #313131;
+}
+
+.options {
+  width: 40%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.about,
+.projects,
+.contact {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+}
+
+.span {
+  color: #fff;
+  margin-bottom: 2px;
+}
+
+.bar {
+  display: none;
+  background-color: #ffffffda;
+  width: 100%;
+  height: 3px;
+  border-radius: 3px;
+}
+
+.about:hover .bar,
+.projects:hover .bar,
+.contact:hover .bar {
+  display: flex;
+}
