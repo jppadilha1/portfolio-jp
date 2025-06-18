@@ -10,10 +10,17 @@
   "author": "",
   "license": "MIT",
   "dependencies": {
-    "commitizen": "4.3.0",
-    "cz-conventional-changelog": "3.3.0",
     "next": "^15.3.3",
     "react": "^19.1.0",
     "react-dom": "^19.1.0"
+  },
+  "devDependencies": {
+    "commitizen": "^4.3.0",
+    "cz-conventional-changelog": "^3.3.0"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
   }
 }
