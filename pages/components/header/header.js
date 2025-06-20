@@ -6,7 +6,7 @@ export function Header() {
       <div className={styles.header}>
         <div className={styles.options}>
           <div className={styles.about}>
-            <div className={styles.span}>About</div>
+            <div className={styles.span}>Home</div>
             <div className={styles.bar}></div>
           </div>
 
