@@ -1,5 +1,5 @@
-import { Header } from "./components/header/header.js";
-import { Main } from "./components/main/main.js";
+import { Header } from "./../components/header/header.js";
+import { Main } from "./../components/main/main.js";
 
 export default function Root() {
   return (
