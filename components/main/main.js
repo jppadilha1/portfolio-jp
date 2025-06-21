@@ -10,7 +10,7 @@ export function Main() {
           <div className={style.desc}>
             <h1>Hello👋🏼 I'm João Pedro</h1>
             <p>
-              Atuo como desenvolvedor full‑stack web, com identificação e
+              Atuo como desenvolvedor Full‑Stack Web, com identificação e
               preferência pelo backend. Comprometido com a criação de código
               limpo, eficiente e escalável, possuo interesse genuíno em
               compreender profundamente a arquitetura e os processos internos
@@ -19,7 +19,7 @@ export function Main() {
               de alta performance.
             </p>
             <div className={style.maincontacts}>
-              <button>Download Curriculum</button>
+              <button onClick={downloadCurriculum}>Download Curriculum</button>
               <div className={style.icons}>
                 <GitHubIcon />
                 <LinkedInIcon />
@@ -33,4 +33,13 @@ export function Main() {
       </div>
     </>
   );
+}
+
+function downloadCurriculum() {
+  const link = document.createElement("a");
+  link.href = "/resume-jp.pdf";
+  link.download = "resume-jp.pdf";
+  document.body.appendChild(link);
+  link.click();
+  document.body.removeChild(link);
 }
