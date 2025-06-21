@@ -19,11 +19,11 @@
 
 .info .image {
   height: 100%;
-  width: 37%;
+  width: 36%;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
-  background-color: #1b1b1b;
+  background-color: #0e4a38d7;
   border-radius: 90px;
 }
 
@@ -38,13 +38,12 @@
 
 .desc h1 {
   margin-bottom: 10px;
-  color: antiquewhite;
+  color: #00c853;
 }
 
 .desc p {
-  color: #d6d2d2;
+  color: antiquewhite;
   font-size: medium;
-  font-weight: 600;
   font-family: "Poppins", sans-serif;
   margin-bottom: 35px;
 }
@@ -64,6 +63,11 @@
   background-color: #1b1b1b;
   width: 45%;
   border-radius: 18px;
+  cursor: pointer;
+}
+
+.maincontacts button:hover {
+  color: #00c853;
 }
 
 .icons {
@@ -72,4 +76,36 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  cursor: pointer;
+}
+
+.icons a:hover {
+  margin-bottom: 5px;
+}
+
+/*Mobile*/
+@media (max-width: 500px) {
+  .image img,
+  .info .image {
+    display: none;
+  }
+
+  .info {
+    width: 100%;
+    justify-content: center;
+    font-size: small;
+  }
+
+  .desc {
+    width: 80%;
+  }
+
+  .maincontacts button {
+    font-size: small;
+    width: 60%;
+  }
+
+  .icons {
+    width: 25%;
+  }
 }

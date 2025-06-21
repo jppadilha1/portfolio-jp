@@ -46,3 +46,10 @@
 .contact:hover .bar {
   display: flex;
 }
+
+/*Mobile*/
+@media (max-width: 500px) {
+  .options {
+    width: 80%;
+  }
+}
