@@ -47,7 +47,7 @@ export function Header() {
 
           <div className={styles.projects}>
             <div className={styles.span}>
-              <a>Projects</a>
+              <a href="#projects">Projects</a>
             </div>
             <div className={styles.bar}></div>
           </div>
