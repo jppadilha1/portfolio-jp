@@ -8,11 +8,12 @@ export function Header() {
     const menu = menuRef.current;
     if (!menu) return;
 
-    if (menu.style.display === "none" || menu.style.display === "") {
-      menu.style.display = "flex";
+    if (menu.style.opacity === "0" || menu.style.opacity === "") {
+      menu.style.opacity = 1;
     } else {
-      menu.style.display = "none";
+      menu.style.opacity = 0;
     }
+    menu.style.transition = "opacity 0.4s ease-out";
   }
 
   return (

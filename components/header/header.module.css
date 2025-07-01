@@ -46,15 +46,16 @@
 }
 
 .menupopup {
-  display: none;
+  display: flex;
   flex-direction: column;
   height: 380px;
   width: 320px;
   position: fixed;
   right: 4%;
-  top: 2%;
+  top: 8%;
   background-color: #0e4a38;
   border-bottom-left-radius: 35px;
+  opacity: 0;
 }
 
 .close {
