@@ -1,5 +1,5 @@
 import styles from "./header.module.css";
-import { useRef } from "react";
+import { useRef, useEffect } from "react";
 
 export function Header() {
   const menuRef = useRef(null);
@@ -15,6 +15,19 @@ export function Header() {
     }
     menu.style.transition = "opacity 0.4s ease-out";
   }
+
+  useEffect(() => {
+    let header = document.querySelector(`.${styles.header}`);
+
+    window.addEventListener("scroll", () => {
+      if (window.scrollY >= 100) {
+        header.style.position = "fixed";
+      } else {
+        header.style.position = "relative";
+      }
+      header.style.transition = "position 2s ease-in";
+    });
+  }, []);
 
   return (
     <>
@@ -55,7 +68,7 @@ export function Header() {
 
           <div className={styles.contact}>
             <div className={styles.span}>
-              <a>Contact</a>
+              <a href="#contact">Contact</a>
             </div>
             <div className={styles.bar}></div>
           </div>
