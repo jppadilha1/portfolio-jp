@@ -1,0 +1,127 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap");
+
+.contactsection {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: auto;
+  height: 100vh;
+  background-color: #0b3d2e;
+}
+
+.contactcontent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 60%;
+  height: 80%;
+}
+
+.contactspan {
+  font-family: "Poppins", sans-serif;
+  text-align: center;
+  height: 12%;
+}
+
+.contactcontent p {
+  margin-top: 18px;
+  font-weight: 600;
+  color: antiquewhite;
+}
+
+.contactspan span {
+  font-size: 28px;
+  font-weight: bold;
+  color: #00c853;
+}
+
+.form {
+  display: grid;
+  width: 100%;
+  height: 300px;
+  grid-template-areas:
+    "name email"
+    "message message"
+    "cta cta";
+}
+
+.name {
+  grid-area: name;
+}
+
+.email {
+  grid-area: email;
+}
+
+.message {
+  grid-area: message;
+}
+
+.cta {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  grid-area: cta;
+}
+
+.cta button {
+  width: 40%;
+  height: 50px;
+  transform: translateY(50px);
+}
+
+.cta button:hover {
+  font-weight: 600;
+  transition: "background-color 0.8s ease-out";
+  border: none;
+  cursor: pointer;
+}
+
+.name,
+.email,
+.message {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.name input,
+.email input {
+  width: 95%;
+  height: 50px;
+}
+
+.email input,
+.email label {
+  margin-left: 5%;
+}
+
+.message input {
+  width: 100%;
+  height: 50px;
+}
+
+.name label,
+.email label,
+.message label {
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  color: antiquewhite;
+}
+
+.name input,
+.email input,
+.message textarea {
+  border: none;
+  color: antiquewhite;
+  border-bottom: 2px solid antiquewhite;
+  background-color: #0b3d2e;
+}
+
+.name input:focus,
+.email input:focus,
+.message textarea:focus {
+  outline: none;
+  color: antiquewhite;
+}
