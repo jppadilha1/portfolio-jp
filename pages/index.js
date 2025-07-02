@@ -1,6 +1,7 @@
 import { Header } from "./../components/header/header.js";
 import { Main } from "./../components/main/main.js";
 import { Projects } from "../components/projects/projects.js";
+import { ContactMe } from "../components/contact/contact.js";
 
 export default function Root() {
   return (
@@ -17,6 +18,7 @@ export default function Root() {
       <Header />
       <Main />
       <Projects />
+      <ContactMe />
     </>
   );
 }
