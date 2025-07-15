@@ -1,6 +1,6 @@
 import nodemailer from "nodemailer";
 
-export default function (req, reply) {
+export default async function (req, reply) {
   const { name, email, message } = req.body;
 
   const transporter = nodemailer.createTransport({
@@ -18,12 +18,11 @@ export default function (req, reply) {
     text: `Informações:\nNome:${name}\nEmail:${email}\nMensagem:${message}`,
   };
 
-  const info = transporter.sendMail(options, (err, info) => {
-    if (err) {
-      console.log(err);
-      return res.status(500).send("Erro ao enviar o email");
-    }
-  });
-
-  return reply.status(200).json({ message: "Email enviado com sucesso." });
+  try {
+    await transporter.sendMail(options);
+    return reply.status(200).json({ message: "Email enviado com sucesso." });
+  } catch (error) {
+    console.error("Erro ao enviar email:", error);
+    return reply.status(500).json({ error: "Erro ao enviar o email." });
+  }
 }
