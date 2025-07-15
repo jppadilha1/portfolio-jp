@@ -7,7 +7,7 @@ export function ContactMe() {
   const emailref = useRef("");
   const messageref = useRef("");
 
-  function handleSend() {
+  async function handleSend() {
     const name = nameref.current.value;
     const email = emailref.current.value;
     const message = messageref.current.value;
@@ -17,12 +17,33 @@ export function ContactMe() {
         icon: "error",
         confirmButtonColor: "#1b1b1b",
       });
+      return;
     }
     nameref.current.value = "";
     emailref.current.value = "";
     messageref.current.value = "";
 
-    console.log(name, email, message);
+    const response = await fetch("api/v1/sendemail", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        name,
+        email,
+        message,
+      }),
+    });
+
+    const responseBody = await response.json();
+    if (responseBody.message === "Email enviado com sucesso.") {
+      Swal.fire({
+        title:
+          "Mensagem enviada com sucesso! em breve entrarei em contato, obrigado.",
+        icon: "success",
+        confirmButtonColor: "#1b1b1b",
+      });
+    }
   }
 
   return (
