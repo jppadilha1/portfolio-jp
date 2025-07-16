@@ -125,3 +125,10 @@
   outline: none;
   color: antiquewhite;
 }
+
+/*Mobile*/
+@media (max-width: 639px) {
+  .cta button {
+    width: 70%;
+  }
+}
