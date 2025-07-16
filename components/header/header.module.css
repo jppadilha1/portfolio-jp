@@ -122,8 +122,10 @@
 }
 
 /*Mobile*/
-@media (max-width: 500px) {
-  .options {
-    width: 80%;
+@media (max-width: 639px) {
+  .logo {
+    width: 150px;
+    height: 110px;
+    transform: translateX(-25px);
   }
 }
