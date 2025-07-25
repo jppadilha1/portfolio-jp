@@ -32,9 +32,9 @@ export function Projects() {
         <div className={style.projects}>
           <div className={style.project}>
             <div className={style.pcontent}>
-              <h2>Secure Form</h2>
+              <img src="/secure-form.png" alt="image about project"></img>
               <div className={style.details}>
-                <img src="/secure-form.png" alt="image about project"></img>
+                <h2>Secure Form</h2>
                 <p>
                   Projeto focado em explorar envio de e-mails com Nodemailer e
                   implementar autenticação JWT para controle de acesso a rotas
@@ -55,12 +55,9 @@ export function Projects() {
           </div>
           <div className={style.project}>
             <div className={style.pcontent}>
-              <h2>Climate Searcher</h2>
+              <img src="/climate-searcher.png" alt="image about project"></img>
               <div className={style.details}>
-                <img
-                  src="/climate-searcher.png"
-                  alt="image about project"
-                ></img>
+                <h2>Climate Searcher</h2>
                 <p>
                   Consumindo API para retornar as condições climáticas de
                   qualquer cidade ou estado ao usuário.
