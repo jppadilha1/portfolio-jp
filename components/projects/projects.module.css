@@ -103,4 +103,19 @@
     grid-template-rows: none;
     grid-template-columns: 100%;
   }
+
+  .details p {
+    width: 100%;
+    height: 30%;
+    overflow-wrap: break-word;
+    font-size: small;
+  }
+
+  .details h2 {
+    font-size: medium;
+  }
+
+  .details {
+    gap: 5px;
+  }
 }
