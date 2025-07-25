@@ -84,25 +84,47 @@
 }
 
 /*Mobile*/
-@media (max-width: 500px) {
-  .image img,
+@media (max-width: 639px) {
   .info .image {
-    display: none;
+    height: 280px;
+    width: 280px;
+    border-radius: 60px;
+  }
+
+  .image img {
+    height: 100%;
+    width: 100%;
   }
 
   .info {
     width: 100%;
-    justify-content: center;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: column-reverse;
     font-size: small;
   }
 
   .desc {
     width: 80%;
+    margin-top: 30px;
   }
 
   .maincontacts button {
     font-size: small;
     width: 60%;
+  }
+
+  .icons {
+    width: 25%;
+  }
+
+  .main {
+    height: 100vh;
+  }
+
+  .maincontacts button {
+    width: 60%;
+    border-radius: 15px;
   }
 
   .icons {

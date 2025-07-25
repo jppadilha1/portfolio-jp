@@ -87,3 +87,17 @@
 .btnprojects .button:hover {
   color: #00c853;
 }
+
+/*Mobile*/
+@media (max-width: 639px) {
+  .projectscont {
+    height: 150vh;
+    justify-content: space-around;
+  }
+
+  .projects {
+    height: 75%;
+    grid-template-rows: none;
+    grid-template-columns: 100%;
+  }
+}
