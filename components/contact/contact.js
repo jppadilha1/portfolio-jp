@@ -19,6 +19,16 @@ export function ContactMe() {
       });
       return;
     }
+
+    if (!name || !email || !message) {
+      Swal.fire({
+        title: "Por favor, preencha todos os dados para prosseguir",
+        icon: "error",
+        confirmButtonColor: "#1b1b1b",
+      });
+      return;
+    }
+
     nameref.current.value = "";
     emailref.current.value = "";
     messageref.current.value = "";
